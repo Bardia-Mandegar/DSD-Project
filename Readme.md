@@ -1,8 +1,4 @@
 
-![LOGO](https://github.com/Sharif-University-ESRLab/spring2024-uefi-calculator/assets/79264802/88ffe13b-b0a1-4777-909d-6388c96c0ecc)
-
-
-
 # Parking Controller
 
 Our Project is a Verilog Module to Control a Parking for entry and leave.
