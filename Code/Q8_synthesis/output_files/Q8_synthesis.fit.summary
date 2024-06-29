@@ -1,0 +1,11 @@
+Fitter Status : Successful - Sat Jun 29 08:26:14 2024
+Quartus II 64-Bit Version : 13.1.0 Build 162 10/23/2013 SJ Web Edition
+Revision Name : Q8_synthesis
+Top-level Entity Name : ParkingController
+Family : MAX II
+Device : EPM1270T144C3
+Timing Models : Final
+Total logic elements : 1,115 / 1,270 ( 88 % )
+Total pins : 47 / 116 ( 41 % )
+Total virtual pins : 0
+UFM blocks : 0 / 1 ( 0 % )

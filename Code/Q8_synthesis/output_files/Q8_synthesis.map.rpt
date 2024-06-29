@@ -1,0 +1,441 @@
+Analysis & Synthesis report for Q8_synthesis
+Sat Jun 29 08:26:08 2024
+Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Inverted Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod0
+ 13. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                             ;
++-----------------------------+--------------------------------------------+
+; Analysis & Synthesis Status ; Successful - Sat Jun 29 08:26:08 2024      ;
+; Quartus II 64-Bit Version   ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
+; Revision Name               ; Q8_synthesis                               ;
+; Top-level Entity Name       ; ParkingController                          ;
+; Family                      ; MAX II                                     ;
+; Total logic elements        ; 1,166                                      ;
+; Total pins                  ; 47                                         ;
+; Total virtual pins          ; 0                                          ;
+; UFM blocks                  ; 0 / 1 ( 0 % )                              ;
++-----------------------------+--------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Top-level entity name                                                      ; ParkingController  ; Q8_synthesis       ;
+; Family name                                                                ; MAX II             ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 20     ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                           ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                       ; Library ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------+---------+
+; ParkingController.v              ; yes             ; User Verilog HDL File        ; C:/Users/itsba/Desktop/Q8_synthesis/ParkingController.v            ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; d:/altera/13.1/quartus/libraries/megafunctions/lpm_divide.tdf      ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                 ; d:/altera/13.1/quartus/libraries/megafunctions/abs_divider.inc     ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                 ; d:/altera/13.1/quartus/libraries/megafunctions/sign_div_unsign.inc ;         ;
+; aglobal131.inc                   ; yes             ; Megafunction                 ; d:/altera/13.1/quartus/libraries/megafunctions/aglobal131.inc      ;         ;
+; db/lpm_divide_i8o.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/itsba/Desktop/Q8_synthesis/db/lpm_divide_i8o.tdf          ;         ;
+; db/abs_divider_3dg.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/itsba/Desktop/Q8_synthesis/db/abs_divider_3dg.tdf         ;         ;
+; db/alt_u_div_fle.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/itsba/Desktop/Q8_synthesis/db/alt_u_div_fle.tdf           ;         ;
+; db/add_sub_i4c.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/itsba/Desktop/Q8_synthesis/db/add_sub_i4c.tdf             ;         ;
+; db/add_sub_j4c.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/itsba/Desktop/Q8_synthesis/db/add_sub_j4c.tdf             ;         ;
+; db/add_sub_36c.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/itsba/Desktop/Q8_synthesis/db/add_sub_36c.tdf             ;         ;
+; db/add_sub_46c.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/itsba/Desktop/Q8_synthesis/db/add_sub_46c.tdf             ;         ;
+; db/add_sub_56c.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/itsba/Desktop/Q8_synthesis/db/add_sub_56c.tdf             ;         ;
+; db/add_sub_66c.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/itsba/Desktop/Q8_synthesis/db/add_sub_66c.tdf             ;         ;
+; db/add_sub_k4c.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/itsba/Desktop/Q8_synthesis/db/add_sub_k4c.tdf             ;         ;
+; db/add_sub_l4c.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/itsba/Desktop/Q8_synthesis/db/add_sub_l4c.tdf             ;         ;
+; db/add_sub_m4c.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/itsba/Desktop/Q8_synthesis/db/add_sub_m4c.tdf             ;         ;
+; db/add_sub_n4c.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/itsba/Desktop/Q8_synthesis/db/add_sub_n4c.tdf             ;         ;
+; db/add_sub_o4c.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/itsba/Desktop/Q8_synthesis/db/add_sub_o4c.tdf             ;         ;
+; db/add_sub_p4c.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/itsba/Desktop/Q8_synthesis/db/add_sub_p4c.tdf             ;         ;
+; db/add_sub_q4c.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/itsba/Desktop/Q8_synthesis/db/add_sub_q4c.tdf             ;         ;
+; db/add_sub_26c.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/itsba/Desktop/Q8_synthesis/db/add_sub_26c.tdf             ;         ;
+; db/lpm_abs_sb9.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/itsba/Desktop/Q8_synthesis/db/lpm_abs_sb9.tdf             ;         ;
+; db/lpm_abs_tb9.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/itsba/Desktop/Q8_synthesis/db/lpm_abs_tb9.tdf             ;         ;
+; db/add_sub_tte.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/itsba/Desktop/Q8_synthesis/db/add_sub_tte.tdf             ;         ;
+; db/add_sub_ste.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/itsba/Desktop/Q8_synthesis/db/add_sub_ste.tdf             ;         ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Total logic elements                        ; 1166  ;
+;     -- Combinational with no register       ; 1063  ;
+;     -- Register only                        ; 66    ;
+;     -- Combinational with a register        ; 37    ;
+;                                             ;       ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 248   ;
+;     -- 3 input functions                    ; 348   ;
+;     -- 2 input functions                    ; 396   ;
+;     -- 1 input functions                    ; 108   ;
+;     -- 0 input functions                    ; 0     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 675   ;
+;     -- arithmetic mode                      ; 491   ;
+;     -- qfbk mode                            ; 0     ;
+;     -- register cascade mode                ; 0     ;
+;     -- synchronous clear/load mode          ; 0     ;
+;     -- asynchronous clear/load mode         ; 0     ;
+;                                             ;       ;
+; Total registers                             ; 103   ;
+; Total logic cells in carry chains           ; 551   ;
+; I/O pins                                    ; 47    ;
+; Maximum fan-out node                        ; clk   ;
+; Maximum fan-out                             ; 103   ;
+; Total fan-out                               ; 3147  ;
+; Average fan-out                             ; 2.59  ;
++---------------------------------------------+-------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                 ;
++-----------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node              ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                                                                                   ; Library Name ;
++-----------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; |ParkingController                      ; 1166 (466)  ; 103          ; 0          ; 47   ; 0            ; 1063 (363)   ; 66 (66)           ; 37 (37)          ; 551 (235)       ; 0 (0)      ; |ParkingController                                                                                                                    ; work         ;
+;    |lpm_divide:Mod0|                    ; 700 (0)     ; 0            ; 0          ; 0    ; 0            ; 700 (0)      ; 0 (0)             ; 0 (0)            ; 316 (0)         ; 0 (0)      ; |ParkingController|lpm_divide:Mod0                                                                                                    ; work         ;
+;       |lpm_divide_i8o:auto_generated|   ; 700 (0)     ; 0            ; 0          ; 0    ; 0            ; 700 (0)      ; 0 (0)             ; 0 (0)            ; 316 (0)         ; 0 (0)      ; |ParkingController|lpm_divide:Mod0|lpm_divide_i8o:auto_generated                                                                      ; work         ;
+;          |abs_divider_3dg:divider|      ; 700 (0)     ; 0            ; 0          ; 0    ; 0            ; 700 (0)      ; 0 (0)             ; 0 (0)            ; 316 (0)         ; 0 (0)      ; |ParkingController|lpm_divide:Mod0|lpm_divide_i8o:auto_generated|abs_divider_3dg:divider                                              ; work         ;
+;             |add_sub_ste:compl_add_rem| ; 13 (13)     ; 0            ; 0          ; 0    ; 0            ; 13 (13)      ; 0 (0)             ; 0 (0)            ; 13 (13)         ; 0 (0)      ; |ParkingController|lpm_divide:Mod0|lpm_divide_i8o:auto_generated|abs_divider_3dg:divider|add_sub_ste:compl_add_rem                    ; work         ;
+;             |alt_u_div_fle:divider|     ; 655 (384)   ; 0            ; 0          ; 0    ; 0            ; 655 (384)    ; 0 (0)             ; 0 (0)            ; 271 (0)         ; 0 (0)      ; |ParkingController|lpm_divide:Mod0|lpm_divide_i8o:auto_generated|abs_divider_3dg:divider|alt_u_div_fle:divider                        ; work         ;
+;                |add_sub_46c:add_sub_11| ; 12 (12)     ; 0            ; 0          ; 0    ; 0            ; 12 (12)      ; 0 (0)             ; 0 (0)            ; 12 (12)         ; 0 (0)      ; |ParkingController|lpm_divide:Mod0|lpm_divide_i8o:auto_generated|abs_divider_3dg:divider|alt_u_div_fle:divider|add_sub_46c:add_sub_11 ; work         ;
+;                |add_sub_56c:add_sub_12| ; 12 (12)     ; 0            ; 0          ; 0    ; 0            ; 12 (12)      ; 0 (0)             ; 0 (0)            ; 12 (12)         ; 0 (0)      ; |ParkingController|lpm_divide:Mod0|lpm_divide_i8o:auto_generated|abs_divider_3dg:divider|alt_u_div_fle:divider|add_sub_56c:add_sub_12 ; work         ;
+;                |add_sub_66c:add_sub_13| ; 13 (13)     ; 0            ; 0          ; 0    ; 0            ; 13 (13)      ; 0 (0)             ; 0 (0)            ; 13 (13)         ; 0 (0)      ; |ParkingController|lpm_divide:Mod0|lpm_divide_i8o:auto_generated|abs_divider_3dg:divider|alt_u_div_fle:divider|add_sub_66c:add_sub_13 ; work         ;
+;                |add_sub_66c:add_sub_14| ; 13 (13)     ; 0            ; 0          ; 0    ; 0            ; 13 (13)      ; 0 (0)             ; 0 (0)            ; 13 (13)         ; 0 (0)      ; |ParkingController|lpm_divide:Mod0|lpm_divide_i8o:auto_generated|abs_divider_3dg:divider|alt_u_div_fle:divider|add_sub_66c:add_sub_14 ; work         ;
+;                |add_sub_66c:add_sub_15| ; 13 (13)     ; 0            ; 0          ; 0    ; 0            ; 13 (13)      ; 0 (0)             ; 0 (0)            ; 13 (13)         ; 0 (0)      ; |ParkingController|lpm_divide:Mod0|lpm_divide_i8o:auto_generated|abs_divider_3dg:divider|alt_u_div_fle:divider|add_sub_66c:add_sub_15 ; work         ;
+;                |add_sub_66c:add_sub_16| ; 13 (13)     ; 0            ; 0          ; 0    ; 0            ; 13 (13)      ; 0 (0)             ; 0 (0)            ; 13 (13)         ; 0 (0)      ; |ParkingController|lpm_divide:Mod0|lpm_divide_i8o:auto_generated|abs_divider_3dg:divider|alt_u_div_fle:divider|add_sub_66c:add_sub_16 ; work         ;
+;                |add_sub_66c:add_sub_17| ; 13 (13)     ; 0            ; 0          ; 0    ; 0            ; 13 (13)      ; 0 (0)             ; 0 (0)            ; 13 (13)         ; 0 (0)      ; |ParkingController|lpm_divide:Mod0|lpm_divide_i8o:auto_generated|abs_divider_3dg:divider|alt_u_div_fle:divider|add_sub_66c:add_sub_17 ; work         ;
+;                |add_sub_66c:add_sub_18| ; 13 (13)     ; 0            ; 0          ; 0    ; 0            ; 13 (13)      ; 0 (0)             ; 0 (0)            ; 13 (13)         ; 0 (0)      ; |ParkingController|lpm_divide:Mod0|lpm_divide_i8o:auto_generated|abs_divider_3dg:divider|alt_u_div_fle:divider|add_sub_66c:add_sub_18 ; work         ;
+;                |add_sub_66c:add_sub_19| ; 13 (13)     ; 0            ; 0          ; 0    ; 0            ; 13 (13)      ; 0 (0)             ; 0 (0)            ; 13 (13)         ; 0 (0)      ; |ParkingController|lpm_divide:Mod0|lpm_divide_i8o:auto_generated|abs_divider_3dg:divider|alt_u_div_fle:divider|add_sub_66c:add_sub_19 ; work         ;
+;                |add_sub_66c:add_sub_20| ; 13 (13)     ; 0            ; 0          ; 0    ; 0            ; 13 (13)      ; 0 (0)             ; 0 (0)            ; 13 (13)         ; 0 (0)      ; |ParkingController|lpm_divide:Mod0|lpm_divide_i8o:auto_generated|abs_divider_3dg:divider|alt_u_div_fle:divider|add_sub_66c:add_sub_20 ; work         ;
+;                |add_sub_66c:add_sub_21| ; 13 (13)     ; 0            ; 0          ; 0    ; 0            ; 13 (13)      ; 0 (0)             ; 0 (0)            ; 13 (13)         ; 0 (0)      ; |ParkingController|lpm_divide:Mod0|lpm_divide_i8o:auto_generated|abs_divider_3dg:divider|alt_u_div_fle:divider|add_sub_66c:add_sub_21 ; work         ;
+;                |add_sub_66c:add_sub_22| ; 13 (13)     ; 0            ; 0          ; 0    ; 0            ; 13 (13)      ; 0 (0)             ; 0 (0)            ; 13 (13)         ; 0 (0)      ; |ParkingController|lpm_divide:Mod0|lpm_divide_i8o:auto_generated|abs_divider_3dg:divider|alt_u_div_fle:divider|add_sub_66c:add_sub_22 ; work         ;
+;                |add_sub_66c:add_sub_23| ; 13 (13)     ; 0            ; 0          ; 0    ; 0            ; 13 (13)      ; 0 (0)             ; 0 (0)            ; 13 (13)         ; 0 (0)      ; |ParkingController|lpm_divide:Mod0|lpm_divide_i8o:auto_generated|abs_divider_3dg:divider|alt_u_div_fle:divider|add_sub_66c:add_sub_23 ; work         ;
+;                |add_sub_66c:add_sub_24| ; 13 (13)     ; 0            ; 0          ; 0    ; 0            ; 13 (13)      ; 0 (0)             ; 0 (0)            ; 13 (13)         ; 0 (0)      ; |ParkingController|lpm_divide:Mod0|lpm_divide_i8o:auto_generated|abs_divider_3dg:divider|alt_u_div_fle:divider|add_sub_66c:add_sub_24 ; work         ;
+;                |add_sub_66c:add_sub_25| ; 13 (13)     ; 0            ; 0          ; 0    ; 0            ; 13 (13)      ; 0 (0)             ; 0 (0)            ; 13 (13)         ; 0 (0)      ; |ParkingController|lpm_divide:Mod0|lpm_divide_i8o:auto_generated|abs_divider_3dg:divider|alt_u_div_fle:divider|add_sub_66c:add_sub_25 ; work         ;
+;                |add_sub_66c:add_sub_26| ; 13 (13)     ; 0            ; 0          ; 0    ; 0            ; 13 (13)      ; 0 (0)             ; 0 (0)            ; 13 (13)         ; 0 (0)      ; |ParkingController|lpm_divide:Mod0|lpm_divide_i8o:auto_generated|abs_divider_3dg:divider|alt_u_div_fle:divider|add_sub_66c:add_sub_26 ; work         ;
+;                |add_sub_66c:add_sub_27| ; 13 (13)     ; 0            ; 0          ; 0    ; 0            ; 13 (13)      ; 0 (0)             ; 0 (0)            ; 13 (13)         ; 0 (0)      ; |ParkingController|lpm_divide:Mod0|lpm_divide_i8o:auto_generated|abs_divider_3dg:divider|alt_u_div_fle:divider|add_sub_66c:add_sub_27 ; work         ;
+;                |add_sub_66c:add_sub_28| ; 13 (13)     ; 0            ; 0          ; 0    ; 0            ; 13 (13)      ; 0 (0)             ; 0 (0)            ; 13 (13)         ; 0 (0)      ; |ParkingController|lpm_divide:Mod0|lpm_divide_i8o:auto_generated|abs_divider_3dg:divider|alt_u_div_fle:divider|add_sub_66c:add_sub_28 ; work         ;
+;                |add_sub_66c:add_sub_29| ; 13 (13)     ; 0            ; 0          ; 0    ; 0            ; 13 (13)      ; 0 (0)             ; 0 (0)            ; 13 (13)         ; 0 (0)      ; |ParkingController|lpm_divide:Mod0|lpm_divide_i8o:auto_generated|abs_divider_3dg:divider|alt_u_div_fle:divider|add_sub_66c:add_sub_29 ; work         ;
+;                |add_sub_66c:add_sub_30| ; 13 (13)     ; 0            ; 0          ; 0    ; 0            ; 13 (13)      ; 0 (0)             ; 0 (0)            ; 13 (13)         ; 0 (0)      ; |ParkingController|lpm_divide:Mod0|lpm_divide_i8o:auto_generated|abs_divider_3dg:divider|alt_u_div_fle:divider|add_sub_66c:add_sub_30 ; work         ;
+;                |add_sub_66c:add_sub_31| ; 13 (13)     ; 0            ; 0          ; 0    ; 0            ; 13 (13)      ; 0 (0)             ; 0 (0)            ; 13 (13)         ; 0 (0)      ; |ParkingController|lpm_divide:Mod0|lpm_divide_i8o:auto_generated|abs_divider_3dg:divider|alt_u_div_fle:divider|add_sub_66c:add_sub_31 ; work         ;
+;             |lpm_abs_tb9:my_abs_num|    ; 32 (32)     ; 0            ; 0          ; 0    ; 0            ; 32 (32)      ; 0 (0)             ; 0 (0)            ; 32 (32)         ; 0 (0)      ; |ParkingController|lpm_divide:Mod0|lpm_divide_i8o:auto_generated|abs_divider_3dg:divider|lpm_abs_tb9:my_abs_num                       ; work         ;
++-----------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------------------------------------------------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++--------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                             ;
++---------------------------------------+----------------------------------------+
+; Register name                         ; Reason for Removal                     ;
++---------------------------------------+----------------------------------------+
+; total_others_space[0]                 ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 1 ;                                        ;
++---------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 103   ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------+
+; Inverted Register Statistics                      ;
++-----------------------------------------+---------+
+; Inverted Register                       ; Fan out ;
++-----------------------------------------+---------+
+; uni_vacated_space[2]~reg0               ; 2       ;
+; uni_vacated_space[4]~reg0               ; 2       ;
+; uni_vacated_space[5]~reg0               ; 2       ;
+; uni_vacated_space[6]~reg0               ; 2       ;
+; uni_vacated_space[7]~reg0               ; 2       ;
+; uni_vacated_space[8]~reg0               ; 2       ;
+; vacated_space[3]~reg0                   ; 2       ;
+; vacated_space[6]~reg0                   ; 2       ;
+; vacated_space[7]~reg0                   ; 2       ;
+; second[13]                              ; 5       ;
+; second[12]                              ; 4       ;
+; second[7]                               ; 4       ;
+; second[14]                              ; 4       ;
+; total_others_space[3]                   ; 3       ;
+; total_others_space[6]                   ; 3       ;
+; total_others_space[7]                   ; 3       ;
+; Total number of inverted registers = 16 ;         ;
++-----------------------------------------+---------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
+; 3:1                ; 14 bits   ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; Yes        ; |ParkingController|uni_parked_cars[9]~reg0   ;
+; 4:1                ; 17 bits   ; 34 LEs        ; 17 LEs               ; 17 LEs                 ; Yes        ; |ParkingController|vacated_space[1]~reg0     ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |ParkingController|uni_vacated_space[8]~reg0 ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |ParkingController|vacated_space[7]~reg0     ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |ParkingController|second                    ;
+; 3:1                ; 20 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; No         ; |ParkingController|uni_vacated_space         ;
+; 4:1                ; 20 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; No         ; |ParkingController|parked_cars               ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; No         ; |ParkingController|parked_cars               ;
+; 5:1                ; 31 bits   ; 93 LEs        ; 62 LEs               ; 31 LEs                 ; No         ; |ParkingController|total_others_space        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
+
+
++------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Mod0 ;
++------------------------+----------------+------------------------+
+; Parameter Name         ; Value          ; Type                   ;
++------------------------+----------------+------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                ;
+; LPM_WIDTHD             ; 13             ; Untyped                ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                ;
+; LPM_PIPELINE           ; 0              ; Untyped                ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_i8o ; Untyped                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
++------------------------+----------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+    Info: Processing started: Sat Jun 29 08:26:06 2024
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Q8_synthesis -c Q8_synthesis
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 1 design units, including 1 entities, in source file parkingcontroller.v
+    Info (12023): Found entity 1: ParkingController
+Info (12127): Elaborating entity "ParkingController" for the top level hierarchy
+Warning (10230): Verilog HDL assignment warning at ParkingController.v(35): truncated value with size 32 to match size of target (10)
+Warning (10230): Verilog HDL assignment warning at ParkingController.v(36): truncated value with size 32 to match size of target (10)
+Warning (10230): Verilog HDL assignment warning at ParkingController.v(37): truncated value with size 32 to match size of target (10)
+Warning (10230): Verilog HDL assignment warning at ParkingController.v(43): truncated value with size 32 to match size of target (10)
+Warning (10230): Verilog HDL assignment warning at ParkingController.v(44): truncated value with size 32 to match size of target (10)
+Warning (10230): Verilog HDL assignment warning at ParkingController.v(45): truncated value with size 32 to match size of target (10)
+Warning (10230): Verilog HDL assignment warning at ParkingController.v(51): truncated value with size 32 to match size of target (10)
+Warning (10230): Verilog HDL assignment warning at ParkingController.v(52): truncated value with size 32 to match size of target (10)
+Warning (10230): Verilog HDL assignment warning at ParkingController.v(55): truncated value with size 32 to match size of target (10)
+Warning (10230): Verilog HDL assignment warning at ParkingController.v(56): truncated value with size 32 to match size of target (10)
+Warning (10230): Verilog HDL assignment warning at ParkingController.v(62): truncated value with size 32 to match size of target (10)
+Warning (10230): Verilog HDL assignment warning at ParkingController.v(63): truncated value with size 32 to match size of target (10)
+Warning (10230): Verilog HDL assignment warning at ParkingController.v(66): truncated value with size 32 to match size of target (10)
+Warning (10230): Verilog HDL assignment warning at ParkingController.v(67): truncated value with size 32 to match size of target (10)
+Info (278001): Inferred 1 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod0"
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Mod0"
+Info (12133): Instantiated megafunction "lpm_divide:Mod0" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTHN" = "32"
+    Info (12134): Parameter "LPM_WIDTHD" = "13"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_i8o.tdf
+    Info (12023): Found entity 1: lpm_divide_i8o
+Info (12021): Found 1 design units, including 1 entities, in source file db/abs_divider_3dg.tdf
+    Info (12023): Found entity 1: abs_divider_3dg
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_fle.tdf
+    Info (12023): Found entity 1: alt_u_div_fle
+Warning (12136): Clear box output file C:/Users/itsba/Desktop/Q8_synthesis/db/add_sub_i4c.tdf is not compatible with the current compile. Used regenerated output file C:/Users/itsba/Desktop/Q8_synthesis/db/add_sub_i4c.tdf for elaboration
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_i4c.tdf
+    Info (12023): Found entity 1: add_sub_i4c
+Warning (12136): Clear box output file C:/Users/itsba/Desktop/Q8_synthesis/db/add_sub_j4c.tdf is not compatible with the current compile. Used regenerated output file C:/Users/itsba/Desktop/Q8_synthesis/db/add_sub_j4c.tdf for elaboration
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_j4c.tdf
+    Info (12023): Found entity 1: add_sub_j4c
+Warning (12136): Clear box output file C:/Users/itsba/Desktop/Q8_synthesis/db/add_sub_36c.tdf is not compatible with the current compile. Used regenerated output file C:/Users/itsba/Desktop/Q8_synthesis/db/add_sub_36c.tdf for elaboration
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_36c.tdf
+    Info (12023): Found entity 1: add_sub_36c
+Warning (12136): Clear box output file C:/Users/itsba/Desktop/Q8_synthesis/db/add_sub_46c.tdf is not compatible with the current compile. Used regenerated output file C:/Users/itsba/Desktop/Q8_synthesis/db/add_sub_46c.tdf for elaboration
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_46c.tdf
+    Info (12023): Found entity 1: add_sub_46c
+Warning (12136): Clear box output file C:/Users/itsba/Desktop/Q8_synthesis/db/add_sub_56c.tdf is not compatible with the current compile. Used regenerated output file C:/Users/itsba/Desktop/Q8_synthesis/db/add_sub_56c.tdf for elaboration
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_56c.tdf
+    Info (12023): Found entity 1: add_sub_56c
+Warning (12136): Clear box output file C:/Users/itsba/Desktop/Q8_synthesis/db/add_sub_66c.tdf is not compatible with the current compile. Used regenerated output file C:/Users/itsba/Desktop/Q8_synthesis/db/add_sub_66c.tdf for elaboration
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_66c.tdf
+    Info (12023): Found entity 1: add_sub_66c
+Warning (12136): Clear box output file C:/Users/itsba/Desktop/Q8_synthesis/db/add_sub_k4c.tdf is not compatible with the current compile. Used regenerated output file C:/Users/itsba/Desktop/Q8_synthesis/db/add_sub_k4c.tdf for elaboration
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_k4c.tdf
+    Info (12023): Found entity 1: add_sub_k4c
+Warning (12136): Clear box output file C:/Users/itsba/Desktop/Q8_synthesis/db/add_sub_l4c.tdf is not compatible with the current compile. Used regenerated output file C:/Users/itsba/Desktop/Q8_synthesis/db/add_sub_l4c.tdf for elaboration
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_l4c.tdf
+    Info (12023): Found entity 1: add_sub_l4c
+Warning (12136): Clear box output file C:/Users/itsba/Desktop/Q8_synthesis/db/add_sub_m4c.tdf is not compatible with the current compile. Used regenerated output file C:/Users/itsba/Desktop/Q8_synthesis/db/add_sub_m4c.tdf for elaboration
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_m4c.tdf
+    Info (12023): Found entity 1: add_sub_m4c
+Warning (12136): Clear box output file C:/Users/itsba/Desktop/Q8_synthesis/db/add_sub_n4c.tdf is not compatible with the current compile. Used regenerated output file C:/Users/itsba/Desktop/Q8_synthesis/db/add_sub_n4c.tdf for elaboration
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_n4c.tdf
+    Info (12023): Found entity 1: add_sub_n4c
+Warning (12136): Clear box output file C:/Users/itsba/Desktop/Q8_synthesis/db/add_sub_o4c.tdf is not compatible with the current compile. Used regenerated output file C:/Users/itsba/Desktop/Q8_synthesis/db/add_sub_o4c.tdf for elaboration
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_o4c.tdf
+    Info (12023): Found entity 1: add_sub_o4c
+Warning (12136): Clear box output file C:/Users/itsba/Desktop/Q8_synthesis/db/add_sub_p4c.tdf is not compatible with the current compile. Used regenerated output file C:/Users/itsba/Desktop/Q8_synthesis/db/add_sub_p4c.tdf for elaboration
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_p4c.tdf
+    Info (12023): Found entity 1: add_sub_p4c
+Warning (12136): Clear box output file C:/Users/itsba/Desktop/Q8_synthesis/db/add_sub_q4c.tdf is not compatible with the current compile. Used regenerated output file C:/Users/itsba/Desktop/Q8_synthesis/db/add_sub_q4c.tdf for elaboration
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_q4c.tdf
+    Info (12023): Found entity 1: add_sub_q4c
+Warning (12136): Clear box output file C:/Users/itsba/Desktop/Q8_synthesis/db/add_sub_26c.tdf is not compatible with the current compile. Used regenerated output file C:/Users/itsba/Desktop/Q8_synthesis/db/add_sub_26c.tdf for elaboration
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_26c.tdf
+    Info (12023): Found entity 1: add_sub_26c
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_sb9.tdf
+    Info (12023): Found entity 1: lpm_abs_sb9
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_tb9.tdf
+    Info (12023): Found entity 1: lpm_abs_tb9
+Warning (12136): Clear box output file C:/Users/itsba/Desktop/Q8_synthesis/db/add_sub_tte.tdf is not compatible with the current compile. Used regenerated output file C:/Users/itsba/Desktop/Q8_synthesis/db/add_sub_tte.tdf for elaboration
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_tte.tdf
+    Info (12023): Found entity 1: add_sub_tte
+Warning (12136): Clear box output file C:/Users/itsba/Desktop/Q8_synthesis/db/add_sub_ste.tdf is not compatible with the current compile. Used regenerated output file C:/Users/itsba/Desktop/Q8_synthesis/db/add_sub_ste.tdf for elaboration
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_ste.tdf
+    Info (12023): Found entity 1: add_sub_ste
+Info (21057): Implemented 1213 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 5 input pins
+    Info (21059): Implemented 42 output pins
+    Info (21061): Implemented 1166 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 31 warnings
+    Info: Peak virtual memory: 4616 megabytes
+    Info: Processing ended: Sat Jun 29 08:26:08 2024
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
+
+
