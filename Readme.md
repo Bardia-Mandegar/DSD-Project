@@ -1,7 +1,7 @@
 
 # Parking Controller
 
-Our Project is a Verilog Module to Control a Parking for entry and leave.
+Our Project is a Verilog Module to Control a Parking for Entry and Leave.
 
 
 ## Tools
