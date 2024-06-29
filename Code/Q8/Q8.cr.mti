@@ -1,0 +1,15 @@
+C:/Users/itsba/Desktop/Q8/Testbench.v {1 {vlog -work work C:/Users/itsba/Desktop/Q8/Testbench.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module ParkingController_tb
+
+Top level modules:
+	ParkingController_tb
+
+} {} {}} C:/Users/itsba/Desktop/Q8/ParkingController.v {1 {vlog -work work C:/Users/itsba/Desktop/Q8/ParkingController.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module ParkingController
+
+Top level modules:
+	ParkingController
+
+} {} {}}
