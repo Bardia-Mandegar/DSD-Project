@@ -1,7 +1,7 @@
 
 # Parking Controller
 
-This is the Project of Digital Systems Design Course in Sharif University of Technology in Spring 2024 Semester. This is a Verilog Module to Control a Parking for Entry and Leave.
+This is the Project of Digital Systems Design Course in Sharif University of Technology in Spring 2024 Semester. <br>This is a Verilog Module to Control a Parking for Entry and Leave.
 
 
 ## Tools
