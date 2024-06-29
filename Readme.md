@@ -6,8 +6,8 @@ Our Project is a Verilog Module to Control a Parking for entry and leave.
 
 ## Tools
 - Verilog
-- Synthesis
 - ModelSim
+- Synthesis
 
 
 ## Implementation Details
